@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Stay from "./Stay";
 import stays from "../assets/stays.json";
+import { store } from "../store/store";
 
 function Stays() {
+  const { state, dispatch } = useContext(store);
+
   console.log(`Stays`, stays);
   return (
     <div>
@@ -14,7 +17,8 @@ function Stays() {
         {stays.length > 0 && stays.map((stay, i) => <Stay {...stay} key={i} />)}
       </div> */}
       <div className="grid sm:gap-4 grid-cols-1 xl:grid-cols-3 sm:grid-cols-2 mt-6">
-        {stays.length > 0 && stays.map((stay, i) => <Stay {...stay} key={i} />)}
+        {state.filteredStays.length > 0 &&
+          state.filteredStays.map((stay, i) => <Stay {...stay} key={i} />)}
       </div>
     </div>
   );

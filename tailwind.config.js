@@ -7,6 +7,8 @@ module.exports = {
       muli: ["Muli", "sans-serif"],
     },
     borderRadius: {
+      xs: "4px",
+      sm: "6px",
       md: "12px",
       large: "16px",
     },

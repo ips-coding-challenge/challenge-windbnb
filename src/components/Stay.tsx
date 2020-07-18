@@ -1,16 +1,5 @@
 import React from "react";
-
-interface StayProp {
-  city: string;
-  country: string;
-  superHost: boolean;
-  title: string;
-  rating: number;
-  maxGuests: number;
-  type: string;
-  beds?: number;
-  photo: string;
-}
+import StayProps from "../interfaces/StayProps";
 
 const Stay = ({
   city,
@@ -22,7 +11,7 @@ const Stay = ({
   type,
   beds,
   photo,
-}: StayProp) => {
+}: StayProps) => {
   return (
     <div className="flex-col mb-8 w-auto mx-auto">
       <img
