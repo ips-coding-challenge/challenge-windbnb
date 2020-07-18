@@ -10,6 +10,13 @@ module.exports = {
       md: "12px",
       large: "16px",
     },
+    inset: {
+      0: "0",
+      20: "20%",
+      50: "50%",
+      70: "70%",
+      auto: "auto",
+    },
   },
   extend: {},
   variants: {},

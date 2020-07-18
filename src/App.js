@@ -2,6 +2,7 @@ import React from "react";
 import "./assets/main.css";
 import logo from "./assets/logo.svg";
 import Stays from "./components/Stays";
+import Filters from "./components/Filters";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </header>
 
         <Stays />
+
+        {/* Filters */}
+        <Filters />
       </div>
     </div>
   );
