@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./assets/main.css";
+import logo from "./assets/logo.svg";
+import Stays from "./components/Stays";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="container mx-auto px-4">
+        <header className="flex-column md:flex md:justify-between mt-4">
+          <img src={logo} alt="windbnb logo" />
+          <div className="flex flex-wrap box-shadow rounded-large shadow mt-8 md:mt-0 md:w-auto">
+            <div className="flex-auto border-r border-gray-200 py-4 px-4 font-muli">
+              Helsinki, Finland
+            </div>
+            <div className="flex-auto border-r border-gray-200 py-4 px-4 text-gray-400 font-muli">
+              Add Guest
+            </div>
+            <i className="mx-4 flex-initial self-center material-icons text-red-500 text-3xl">
+              search
+            </i>
+          </div>
+        </header>
+
+        <Stays />
+      </div>
     </div>
   );
 }
