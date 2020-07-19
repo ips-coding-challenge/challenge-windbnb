@@ -13,7 +13,7 @@ const Stay = ({
   photo,
 }: StayProps) => {
   return (
-    <div className="stay-container flex-col mb-8 w-auto mx-auto">
+    <div className="stay-container flex-col mb-8 w-auto">
       <img
         className="rounded-large w-full object-cover h-64"
         src={photo}
