@@ -16,17 +16,17 @@ function App() {
     });
   };
 
-  const overflow = useCallback(() => {
+  // const overflow = useCallback(() => {
+
+  // }, []);
+
+  useEffect(() => {
     if (state.showFilters) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
   }, [state.showFilters]);
-
-  useEffect(() => {
-    overflow();
-  }, []);
 
   return (
     <div className="app">
@@ -36,17 +36,19 @@ function App() {
           <div className="flex flex-wrap box-shadow rounded-large shadow mt-8 md:mt-0 md:w-auto">
             <div
               onClick={() => openFilters("location")}
-              className={`flex-auto border-r border-gray-200 py-4 px-4 font-muli ${
+              className={`flex-auto border-r border-gray-200 py-4 px-4 font-muli cursor-pointer hover:bg-gray-200 transition duration-200 ${
                 !state.city ? "text-gray-400" : ""
               }`}
             >
               {state.city ? `${state.city}, Finland` : "Add Location"}
             </div>
             <div
-              onClick={() => openFilters("beds")}
-              className="flex-auto border-r border-gray-200 py-4 px-4 text-gray-400 font-muli"
+              onClick={() => openFilters("guests")}
+              className="flex-auto border-r border-gray-200 py-4 px-4 text-gray-400 font-muli cursor-pointer hover:bg-gray-200 transition duration-200"
             >
-              Add Guest
+              {state.children + state.adults > 0
+                ? state.children + state.adults
+                : "Add Guest"}
             </div>
             <i className="mx-4 flex-initial self-center material-icons text-red-500 text-3xl">
               search
@@ -54,10 +56,19 @@ function App() {
           </div>
         </header>
 
-        <Stays />
+        <Stays stays={state.filteredStays} />
 
         {/* Filters */}
-        {state && state.showFilters && <Filters />}
+        {state && state.showFilters && (
+          <Filters
+            stays={state.stays}
+            filtersType={state.filtersType}
+            guests={state.guests}
+            dispatch={dispatch}
+            adults={state.adults}
+            children={state.children}
+          />
+        )}
       </div>
     </div>
   );

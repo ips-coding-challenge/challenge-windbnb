@@ -13,12 +13,15 @@ interface InitialStateProps {
   filteredStays: Array<StayProp>;
   filtersType?: string;
   city: string;
-  beds: number;
+  children: number;
+  adults: number;
+  guests: number;
 }
 
 interface ActionProps {
   type: string;
   value: any;
+  category?: string;
 }
 
 const initialState: InitialStateProps = {
@@ -27,7 +30,9 @@ const initialState: InitialStateProps = {
   filteredStays: staysData,
   filtersType: "",
   city: "",
-  beds: 0,
+  children: 0,
+  adults: 0,
+  guests: 0,
 };
 
 const store = createContext<{
@@ -45,31 +50,32 @@ const StateProvider = ({ children }: any) => {
         case "FILTERS_TYPE":
           return { ...state, filtersType: action.value };
         case "FILTERS_RESULTS":
-          console.log("search ???", state.city);
-          if (state.city == "") return { ...state, filteredStays: state.stays };
           const filtered = state.stays.filter((stay) => {
-            let stayBeds = 0;
-            if (stay.beds) {
-              stayBeds = stay.beds;
+            if (state.city === "") {
+              return stay.maxGuests >= state.children + state.adults;
             }
             return (
               state.city.toLowerCase() === stay.city.toLowerCase() &&
-              state.beds >= stayBeds
+              stay.maxGuests >= state.children + state.adults
             );
           });
-          console.log("Filtered", filtered);
           return { ...state, filteredStays: filtered };
         case "SET_LOCATION":
           return { ...state, city: action.value };
-        case "INCREMENT_BEDS":
-          return { ...state, beds: state.beds + 1 };
-        case "DECREMENT_BEDS": {
-          if (state.beds > 0) {
-            return { ...state, beds: state.beds - 1 };
-          } else {
-            return { ...state };
+        case "INCREMENT_CHILDREN":
+          return { ...state, children: state.children + 1 };
+        case "DECREMENT_CHILDREN":
+          if (state.children > 0) {
+            return { ...state, children: state.children - 1 };
           }
-        }
+          return { ...state };
+        case "INCREMENT_ADULTS":
+          return { ...state, adults: state.adults + 1 };
+        case "DECREMENT_ADULTS":
+          if (state.adults > 0) {
+            return { ...state, adults: state.adults - 1 };
+          }
+          return { ...state };
         default:
           throw Error("That action doesn't exist");
       }
