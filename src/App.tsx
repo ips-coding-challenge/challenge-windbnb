@@ -9,16 +9,13 @@ function App() {
   const { state, dispatch } = useContext(store);
 
   const openFilters = (type: string) => {
+    console.log("called");
     dispatch({ type: "SET_SHOW_FILTERS", value: true });
     dispatch({
       type: "FILTERS_TYPE",
       value: type,
     });
   };
-
-  // const overflow = useCallback(() => {
-
-  // }, []);
 
   useEffect(() => {
     if (state.showFilters) {
@@ -59,7 +56,8 @@ function App() {
         <Stays stays={state.filteredStays} />
 
         {/* Filters */}
-        {state && state.showFilters && (
+
+        {state.showFilters && (
           <Filters
             stays={state.stays}
             filtersType={state.filtersType}
@@ -67,6 +65,7 @@ function App() {
             dispatch={dispatch}
             adults={state.adults}
             children={state.children}
+            show={state.showFilters}
           />
         )}
       </div>

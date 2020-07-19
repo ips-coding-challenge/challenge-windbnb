@@ -45,7 +45,7 @@ const BedSelector = memo(
     return (
       <div className="flex flex-col items-center md:items-start mb-6">
         <div className="font-muli font-bold text-xl text-left">{title}</div>
-        <div className="text-gray-600 text-gray-700 text-left mb-4">{age}</div>
+        <div className="text-gray-700 text-left mb-4">{age}</div>
 
         {/* Incrementer */}
         <div className="flex items-center md:justify-start">

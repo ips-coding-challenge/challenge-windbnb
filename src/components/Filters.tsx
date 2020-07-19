@@ -4,7 +4,8 @@ import { store } from "../store/store";
 import StayProp from "../interfaces/StayProps";
 
 const Filters = memo(
-  ({ stays, filtersType, dispatch, adults, children }: any) => {
+  ({ stays, filtersType, dispatch, adults, children, show }: any) => {
+    console.log("Filters called ?");
     // const { state, dispatch } = useContext(store);
     const [city, setCity] = useState("");
     const [cities, setCities] = useState<string[]>([]);
@@ -60,22 +61,24 @@ const Filters = memo(
     }, [filtersType]);
 
     useEffect(() => {
-      const clickOutside = (e: MouseEvent) => {
-        if (!filtersRef?.current?.contains(e.target as Node)) {
-          dispatch({ type: "SET_SHOW_FILTERS", value: false });
-        }
-      };
+      if (show) {
+        const clickOutside = (e: MouseEvent) => {
+          if (!filtersRef?.current?.contains(e.target as Node)) {
+            dispatch({ type: "SET_SHOW_FILTERS", value: false });
+          }
+        };
 
-      document.addEventListener("click", clickOutside);
+        document.addEventListener("click", clickOutside);
 
-      return () => {
-        document.removeEventListener("click", clickOutside);
-      };
+        return () => {
+          document.removeEventListener("click", clickOutside);
+        };
+      }
     }, []);
 
     return (
-      // wrapper
       <div className="fixed inset-0 bg-black bg-opacity-25 overflow-y-auto">
+        {console.log("am I Here ")}
         {/* content */}
         <div ref={filtersRef} className="m-h-full bg-white font-muli">
           <div className="flex flex-col h-full container mx-auto px-2 py-4">

@@ -46,6 +46,7 @@ const StateProvider = ({ children }: any) => {
     (state: InitialStateProps, action: ActionProps) => {
       switch (action.type) {
         case "SET_SHOW_FILTERS":
+          console.log("SHOW FILTERS", action.value);
           return { ...state, showFilters: action.value };
         case "FILTERS_TYPE":
           return { ...state, filtersType: action.value };

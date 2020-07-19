@@ -543,7 +543,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /**
@@ -5348,40 +5348,56 @@ html {
   --border-opacity: 1;
 }
 
-.rounded-xs{
-  border-radius: 4px;
+.rounded-none{
+  border-radius: 0;
 }
 
 .rounded-sm{
   border-radius: 6px;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
 .rounded-md{
   border-radius: 12px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.rounded-full{
+  border-radius: 9999px;
+}
+
+.rounded-xs{
+  border-radius: 4px;
 }
 
 .rounded-large{
   border-radius: 16px;
 }
 
-.rounded-t-xs{
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+.rounded-t-none{
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
-.rounded-r-xs{
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+.rounded-r-none{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-.rounded-b-xs{
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
+.rounded-b-none{
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
-.rounded-l-xs{
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+.rounded-l-none{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .rounded-t-sm{
@@ -5404,6 +5420,26 @@ html {
   border-bottom-left-radius: 6px;
 }
 
+.rounded-t{
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-r{
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-b{
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-l{
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 .rounded-t-md{
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
@@ -5422,6 +5458,66 @@ html {
 .rounded-l-md{
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+}
+
+.rounded-t-lg{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-r-lg{
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-b-lg{
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-l-lg{
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-t-full{
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.rounded-r-full{
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+.rounded-b-full{
+  border-bottom-right-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-l-full{
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-t-xs{
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.rounded-r-xs{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.rounded-b-xs{
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.rounded-l-xs{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .rounded-t-large{
@@ -5444,20 +5540,20 @@ html {
   border-bottom-left-radius: 16px;
 }
 
-.rounded-tl-xs{
-  border-top-left-radius: 4px;
+.rounded-tl-none{
+  border-top-left-radius: 0;
 }
 
-.rounded-tr-xs{
-  border-top-right-radius: 4px;
+.rounded-tr-none{
+  border-top-right-radius: 0;
 }
 
-.rounded-br-xs{
-  border-bottom-right-radius: 4px;
+.rounded-br-none{
+  border-bottom-right-radius: 0;
 }
 
-.rounded-bl-xs{
-  border-bottom-left-radius: 4px;
+.rounded-bl-none{
+  border-bottom-left-radius: 0;
 }
 
 .rounded-tl-sm{
@@ -5476,6 +5572,22 @@ html {
   border-bottom-left-radius: 6px;
 }
 
+.rounded-tl{
+  border-top-left-radius: 0.25rem;
+}
+
+.rounded-tr{
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-br{
+  border-bottom-right-radius: 0.25rem;
+}
+
+.rounded-bl{
+  border-bottom-left-radius: 0.25rem;
+}
+
 .rounded-tl-md{
   border-top-left-radius: 12px;
 }
@@ -5490,6 +5602,54 @@ html {
 
 .rounded-bl-md{
   border-bottom-left-radius: 12px;
+}
+
+.rounded-tl-lg{
+  border-top-left-radius: 0.5rem;
+}
+
+.rounded-tr-lg{
+  border-top-right-radius: 0.5rem;
+}
+
+.rounded-br-lg{
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-bl-lg{
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-tl-full{
+  border-top-left-radius: 9999px;
+}
+
+.rounded-tr-full{
+  border-top-right-radius: 9999px;
+}
+
+.rounded-br-full{
+  border-bottom-right-radius: 9999px;
+}
+
+.rounded-bl-full{
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-tl-xs{
+  border-top-left-radius: 4px;
+}
+
+.rounded-tr-xs{
+  border-top-right-radius: 4px;
+}
+
+.rounded-br-xs{
+  border-bottom-right-radius: 4px;
+}
+
+.rounded-bl-xs{
+  border-bottom-left-radius: 4px;
 }
 
 .rounded-tl-large{
@@ -5972,6 +6132,18 @@ html {
 
 .clear-none{
   clear: none;
+}
+
+.font-sans{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-serif{
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-mono{
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-body{
@@ -19133,40 +19305,56 @@ html {
     --border-opacity: 1;
   }
 
-  .sm\:rounded-xs{
-    border-radius: 4px;
+  .sm\:rounded-none{
+    border-radius: 0;
   }
 
   .sm\:rounded-sm{
     border-radius: 6px;
   }
 
+  .sm\:rounded{
+    border-radius: 0.25rem;
+  }
+
   .sm\:rounded-md{
     border-radius: 12px;
+  }
+
+  .sm\:rounded-lg{
+    border-radius: 0.5rem;
+  }
+
+  .sm\:rounded-full{
+    border-radius: 9999px;
+  }
+
+  .sm\:rounded-xs{
+    border-radius: 4px;
   }
 
   .sm\:rounded-large{
     border-radius: 16px;
   }
 
-  .sm\:rounded-t-xs{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+  .sm\:rounded-t-none{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
-  .sm\:rounded-r-xs{
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+  .sm\:rounded-r-none{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  .sm\:rounded-b-xs{
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .sm\:rounded-b-none{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
-  .sm\:rounded-l-xs{
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .sm\:rounded-l-none{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .sm\:rounded-t-sm{
@@ -19189,6 +19377,26 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .sm\:rounded-t{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  .sm\:rounded-r{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .sm\:rounded-b{
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .sm\:rounded-l{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .sm\:rounded-t-md{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -19207,6 +19415,66 @@ html {
   .sm\:rounded-l-md{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+
+  .sm\:rounded-t-lg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .sm\:rounded-r-lg{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .sm\:rounded-b-lg{
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .sm\:rounded-l-lg{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .sm\:rounded-t-full{
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+  }
+
+  .sm\:rounded-r-full{
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .sm\:rounded-b-full{
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .sm\:rounded-l-full{
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .sm\:rounded-t-xs{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .sm\:rounded-r-xs{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .sm\:rounded-b-xs{
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .sm\:rounded-l-xs{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .sm\:rounded-t-large{
@@ -19229,20 +19497,20 @@ html {
     border-bottom-left-radius: 16px;
   }
 
-  .sm\:rounded-tl-xs{
-    border-top-left-radius: 4px;
+  .sm\:rounded-tl-none{
+    border-top-left-radius: 0;
   }
 
-  .sm\:rounded-tr-xs{
-    border-top-right-radius: 4px;
+  .sm\:rounded-tr-none{
+    border-top-right-radius: 0;
   }
 
-  .sm\:rounded-br-xs{
-    border-bottom-right-radius: 4px;
+  .sm\:rounded-br-none{
+    border-bottom-right-radius: 0;
   }
 
-  .sm\:rounded-bl-xs{
-    border-bottom-left-radius: 4px;
+  .sm\:rounded-bl-none{
+    border-bottom-left-radius: 0;
   }
 
   .sm\:rounded-tl-sm{
@@ -19261,6 +19529,22 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .sm\:rounded-tl{
+    border-top-left-radius: 0.25rem;
+  }
+
+  .sm\:rounded-tr{
+    border-top-right-radius: 0.25rem;
+  }
+
+  .sm\:rounded-br{
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .sm\:rounded-bl{
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .sm\:rounded-tl-md{
     border-top-left-radius: 12px;
   }
@@ -19275,6 +19559,54 @@ html {
 
   .sm\:rounded-bl-md{
     border-bottom-left-radius: 12px;
+  }
+
+  .sm\:rounded-tl-lg{
+    border-top-left-radius: 0.5rem;
+  }
+
+  .sm\:rounded-tr-lg{
+    border-top-right-radius: 0.5rem;
+  }
+
+  .sm\:rounded-br-lg{
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .sm\:rounded-bl-lg{
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .sm\:rounded-tl-full{
+    border-top-left-radius: 9999px;
+  }
+
+  .sm\:rounded-tr-full{
+    border-top-right-radius: 9999px;
+  }
+
+  .sm\:rounded-br-full{
+    border-bottom-right-radius: 9999px;
+  }
+
+  .sm\:rounded-bl-full{
+    border-bottom-left-radius: 9999px;
+  }
+
+  .sm\:rounded-tl-xs{
+    border-top-left-radius: 4px;
+  }
+
+  .sm\:rounded-tr-xs{
+    border-top-right-radius: 4px;
+  }
+
+  .sm\:rounded-br-xs{
+    border-bottom-right-radius: 4px;
+  }
+
+  .sm\:rounded-bl-xs{
+    border-bottom-left-radius: 4px;
   }
 
   .sm\:rounded-tl-large{
@@ -19757,6 +20089,18 @@ html {
 
   .sm\:clear-none{
     clear: none;
+  }
+
+  .sm\:font-sans{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .sm\:font-serif{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .sm\:font-mono{
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .sm\:font-body{
@@ -32919,40 +33263,56 @@ html {
     --border-opacity: 1;
   }
 
-  .md\:rounded-xs{
-    border-radius: 4px;
+  .md\:rounded-none{
+    border-radius: 0;
   }
 
   .md\:rounded-sm{
     border-radius: 6px;
   }
 
+  .md\:rounded{
+    border-radius: 0.25rem;
+  }
+
   .md\:rounded-md{
     border-radius: 12px;
+  }
+
+  .md\:rounded-lg{
+    border-radius: 0.5rem;
+  }
+
+  .md\:rounded-full{
+    border-radius: 9999px;
+  }
+
+  .md\:rounded-xs{
+    border-radius: 4px;
   }
 
   .md\:rounded-large{
     border-radius: 16px;
   }
 
-  .md\:rounded-t-xs{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+  .md\:rounded-t-none{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
-  .md\:rounded-r-xs{
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+  .md\:rounded-r-none{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  .md\:rounded-b-xs{
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .md\:rounded-b-none{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
-  .md\:rounded-l-xs{
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .md\:rounded-l-none{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .md\:rounded-t-sm{
@@ -32975,6 +33335,26 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .md\:rounded-t{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  .md\:rounded-r{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .md\:rounded-b{
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .md\:rounded-l{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .md\:rounded-t-md{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -32993,6 +33373,66 @@ html {
   .md\:rounded-l-md{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+
+  .md\:rounded-t-lg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .md\:rounded-r-lg{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .md\:rounded-b-lg{
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .md\:rounded-l-lg{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .md\:rounded-t-full{
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+  }
+
+  .md\:rounded-r-full{
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .md\:rounded-b-full{
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .md\:rounded-l-full{
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .md\:rounded-t-xs{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .md\:rounded-r-xs{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .md\:rounded-b-xs{
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .md\:rounded-l-xs{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .md\:rounded-t-large{
@@ -33015,20 +33455,20 @@ html {
     border-bottom-left-radius: 16px;
   }
 
-  .md\:rounded-tl-xs{
-    border-top-left-radius: 4px;
+  .md\:rounded-tl-none{
+    border-top-left-radius: 0;
   }
 
-  .md\:rounded-tr-xs{
-    border-top-right-radius: 4px;
+  .md\:rounded-tr-none{
+    border-top-right-radius: 0;
   }
 
-  .md\:rounded-br-xs{
-    border-bottom-right-radius: 4px;
+  .md\:rounded-br-none{
+    border-bottom-right-radius: 0;
   }
 
-  .md\:rounded-bl-xs{
-    border-bottom-left-radius: 4px;
+  .md\:rounded-bl-none{
+    border-bottom-left-radius: 0;
   }
 
   .md\:rounded-tl-sm{
@@ -33047,6 +33487,22 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .md\:rounded-tl{
+    border-top-left-radius: 0.25rem;
+  }
+
+  .md\:rounded-tr{
+    border-top-right-radius: 0.25rem;
+  }
+
+  .md\:rounded-br{
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .md\:rounded-bl{
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .md\:rounded-tl-md{
     border-top-left-radius: 12px;
   }
@@ -33061,6 +33517,54 @@ html {
 
   .md\:rounded-bl-md{
     border-bottom-left-radius: 12px;
+  }
+
+  .md\:rounded-tl-lg{
+    border-top-left-radius: 0.5rem;
+  }
+
+  .md\:rounded-tr-lg{
+    border-top-right-radius: 0.5rem;
+  }
+
+  .md\:rounded-br-lg{
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .md\:rounded-bl-lg{
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .md\:rounded-tl-full{
+    border-top-left-radius: 9999px;
+  }
+
+  .md\:rounded-tr-full{
+    border-top-right-radius: 9999px;
+  }
+
+  .md\:rounded-br-full{
+    border-bottom-right-radius: 9999px;
+  }
+
+  .md\:rounded-bl-full{
+    border-bottom-left-radius: 9999px;
+  }
+
+  .md\:rounded-tl-xs{
+    border-top-left-radius: 4px;
+  }
+
+  .md\:rounded-tr-xs{
+    border-top-right-radius: 4px;
+  }
+
+  .md\:rounded-br-xs{
+    border-bottom-right-radius: 4px;
+  }
+
+  .md\:rounded-bl-xs{
+    border-bottom-left-radius: 4px;
   }
 
   .md\:rounded-tl-large{
@@ -33543,6 +34047,18 @@ html {
 
   .md\:clear-none{
     clear: none;
+  }
+
+  .md\:font-sans{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .md\:font-serif{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .md\:font-mono{
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .md\:font-body{
@@ -46705,40 +47221,56 @@ html {
     --border-opacity: 1;
   }
 
-  .lg\:rounded-xs{
-    border-radius: 4px;
+  .lg\:rounded-none{
+    border-radius: 0;
   }
 
   .lg\:rounded-sm{
     border-radius: 6px;
   }
 
+  .lg\:rounded{
+    border-radius: 0.25rem;
+  }
+
   .lg\:rounded-md{
     border-radius: 12px;
+  }
+
+  .lg\:rounded-lg{
+    border-radius: 0.5rem;
+  }
+
+  .lg\:rounded-full{
+    border-radius: 9999px;
+  }
+
+  .lg\:rounded-xs{
+    border-radius: 4px;
   }
 
   .lg\:rounded-large{
     border-radius: 16px;
   }
 
-  .lg\:rounded-t-xs{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+  .lg\:rounded-t-none{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
-  .lg\:rounded-r-xs{
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+  .lg\:rounded-r-none{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  .lg\:rounded-b-xs{
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .lg\:rounded-b-none{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
-  .lg\:rounded-l-xs{
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .lg\:rounded-l-none{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .lg\:rounded-t-sm{
@@ -46761,6 +47293,26 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .lg\:rounded-t{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  .lg\:rounded-r{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .lg\:rounded-b{
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .lg\:rounded-l{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .lg\:rounded-t-md{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -46779,6 +47331,66 @@ html {
   .lg\:rounded-l-md{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+
+  .lg\:rounded-t-lg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .lg\:rounded-r-lg{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .lg\:rounded-b-lg{
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .lg\:rounded-l-lg{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .lg\:rounded-t-full{
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+  }
+
+  .lg\:rounded-r-full{
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .lg\:rounded-b-full{
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .lg\:rounded-l-full{
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .lg\:rounded-t-xs{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .lg\:rounded-r-xs{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .lg\:rounded-b-xs{
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .lg\:rounded-l-xs{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .lg\:rounded-t-large{
@@ -46801,20 +47413,20 @@ html {
     border-bottom-left-radius: 16px;
   }
 
-  .lg\:rounded-tl-xs{
-    border-top-left-radius: 4px;
+  .lg\:rounded-tl-none{
+    border-top-left-radius: 0;
   }
 
-  .lg\:rounded-tr-xs{
-    border-top-right-radius: 4px;
+  .lg\:rounded-tr-none{
+    border-top-right-radius: 0;
   }
 
-  .lg\:rounded-br-xs{
-    border-bottom-right-radius: 4px;
+  .lg\:rounded-br-none{
+    border-bottom-right-radius: 0;
   }
 
-  .lg\:rounded-bl-xs{
-    border-bottom-left-radius: 4px;
+  .lg\:rounded-bl-none{
+    border-bottom-left-radius: 0;
   }
 
   .lg\:rounded-tl-sm{
@@ -46833,6 +47445,22 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .lg\:rounded-tl{
+    border-top-left-radius: 0.25rem;
+  }
+
+  .lg\:rounded-tr{
+    border-top-right-radius: 0.25rem;
+  }
+
+  .lg\:rounded-br{
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .lg\:rounded-bl{
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .lg\:rounded-tl-md{
     border-top-left-radius: 12px;
   }
@@ -46847,6 +47475,54 @@ html {
 
   .lg\:rounded-bl-md{
     border-bottom-left-radius: 12px;
+  }
+
+  .lg\:rounded-tl-lg{
+    border-top-left-radius: 0.5rem;
+  }
+
+  .lg\:rounded-tr-lg{
+    border-top-right-radius: 0.5rem;
+  }
+
+  .lg\:rounded-br-lg{
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .lg\:rounded-bl-lg{
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .lg\:rounded-tl-full{
+    border-top-left-radius: 9999px;
+  }
+
+  .lg\:rounded-tr-full{
+    border-top-right-radius: 9999px;
+  }
+
+  .lg\:rounded-br-full{
+    border-bottom-right-radius: 9999px;
+  }
+
+  .lg\:rounded-bl-full{
+    border-bottom-left-radius: 9999px;
+  }
+
+  .lg\:rounded-tl-xs{
+    border-top-left-radius: 4px;
+  }
+
+  .lg\:rounded-tr-xs{
+    border-top-right-radius: 4px;
+  }
+
+  .lg\:rounded-br-xs{
+    border-bottom-right-radius: 4px;
+  }
+
+  .lg\:rounded-bl-xs{
+    border-bottom-left-radius: 4px;
   }
 
   .lg\:rounded-tl-large{
@@ -47329,6 +48005,18 @@ html {
 
   .lg\:clear-none{
     clear: none;
+  }
+
+  .lg\:font-sans{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .lg\:font-serif{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .lg\:font-mono{
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .lg\:font-body{
@@ -60491,40 +61179,56 @@ html {
     --border-opacity: 1;
   }
 
-  .xl\:rounded-xs{
-    border-radius: 4px;
+  .xl\:rounded-none{
+    border-radius: 0;
   }
 
   .xl\:rounded-sm{
     border-radius: 6px;
   }
 
+  .xl\:rounded{
+    border-radius: 0.25rem;
+  }
+
   .xl\:rounded-md{
     border-radius: 12px;
+  }
+
+  .xl\:rounded-lg{
+    border-radius: 0.5rem;
+  }
+
+  .xl\:rounded-full{
+    border-radius: 9999px;
+  }
+
+  .xl\:rounded-xs{
+    border-radius: 4px;
   }
 
   .xl\:rounded-large{
     border-radius: 16px;
   }
 
-  .xl\:rounded-t-xs{
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+  .xl\:rounded-t-none{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
-  .xl\:rounded-r-xs{
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+  .xl\:rounded-r-none{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  .xl\:rounded-b-xs{
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .xl\:rounded-b-none{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
-  .xl\:rounded-l-xs{
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+  .xl\:rounded-l-none{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .xl\:rounded-t-sm{
@@ -60547,6 +61251,26 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .xl\:rounded-t{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  .xl\:rounded-r{
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .xl\:rounded-b{
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  .xl\:rounded-l{
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .xl\:rounded-t-md{
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -60565,6 +61289,66 @@ html {
   .xl\:rounded-l-md{
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+
+  .xl\:rounded-t-lg{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+
+  .xl\:rounded-r-lg{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .xl\:rounded-b-lg{
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .xl\:rounded-l-lg{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .xl\:rounded-t-full{
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+  }
+
+  .xl\:rounded-r-full{
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  .xl\:rounded-b-full{
+    border-bottom-right-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .xl\:rounded-l-full{
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  .xl\:rounded-t-xs{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .xl\:rounded-r-xs{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .xl\:rounded-b-xs{
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  .xl\:rounded-l-xs{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .xl\:rounded-t-large{
@@ -60587,20 +61371,20 @@ html {
     border-bottom-left-radius: 16px;
   }
 
-  .xl\:rounded-tl-xs{
-    border-top-left-radius: 4px;
+  .xl\:rounded-tl-none{
+    border-top-left-radius: 0;
   }
 
-  .xl\:rounded-tr-xs{
-    border-top-right-radius: 4px;
+  .xl\:rounded-tr-none{
+    border-top-right-radius: 0;
   }
 
-  .xl\:rounded-br-xs{
-    border-bottom-right-radius: 4px;
+  .xl\:rounded-br-none{
+    border-bottom-right-radius: 0;
   }
 
-  .xl\:rounded-bl-xs{
-    border-bottom-left-radius: 4px;
+  .xl\:rounded-bl-none{
+    border-bottom-left-radius: 0;
   }
 
   .xl\:rounded-tl-sm{
@@ -60619,6 +61403,22 @@ html {
     border-bottom-left-radius: 6px;
   }
 
+  .xl\:rounded-tl{
+    border-top-left-radius: 0.25rem;
+  }
+
+  .xl\:rounded-tr{
+    border-top-right-radius: 0.25rem;
+  }
+
+  .xl\:rounded-br{
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .xl\:rounded-bl{
+    border-bottom-left-radius: 0.25rem;
+  }
+
   .xl\:rounded-tl-md{
     border-top-left-radius: 12px;
   }
@@ -60633,6 +61433,54 @@ html {
 
   .xl\:rounded-bl-md{
     border-bottom-left-radius: 12px;
+  }
+
+  .xl\:rounded-tl-lg{
+    border-top-left-radius: 0.5rem;
+  }
+
+  .xl\:rounded-tr-lg{
+    border-top-right-radius: 0.5rem;
+  }
+
+  .xl\:rounded-br-lg{
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  .xl\:rounded-bl-lg{
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .xl\:rounded-tl-full{
+    border-top-left-radius: 9999px;
+  }
+
+  .xl\:rounded-tr-full{
+    border-top-right-radius: 9999px;
+  }
+
+  .xl\:rounded-br-full{
+    border-bottom-right-radius: 9999px;
+  }
+
+  .xl\:rounded-bl-full{
+    border-bottom-left-radius: 9999px;
+  }
+
+  .xl\:rounded-tl-xs{
+    border-top-left-radius: 4px;
+  }
+
+  .xl\:rounded-tr-xs{
+    border-top-right-radius: 4px;
+  }
+
+  .xl\:rounded-br-xs{
+    border-bottom-right-radius: 4px;
+  }
+
+  .xl\:rounded-bl-xs{
+    border-bottom-left-radius: 4px;
   }
 
   .xl\:rounded-tl-large{
@@ -61115,6 +61963,18 @@ html {
 
   .xl\:clear-none{
     clear: none;
+  }
+
+  .xl\:font-sans{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  .xl\:font-serif{
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+
+  .xl\:font-mono{
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
   .xl\:font-body{
